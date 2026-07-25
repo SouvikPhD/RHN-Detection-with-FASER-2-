@@ -23,6 +23,12 @@ all_states_e = [
         "e_u_d", "e_u_s", "e_c_d", "e_c_s"
         ]
 
+vis_e = ["e_pi", "nue_pi0", "nue_eta", "e_rho", "nue_rho0", "nue_omega",
+                      "nue_K0", "nue_Ks0", "e_K", "e_Ks", 
+                      "nue_u_u", "nue_d_d", "nue_c_c", "nue_s_s",
+                      "e_u_d", "e_u_s", "e_c_d", "e_c_s", 
+                      "nue_e_e", "nue_mu_mu", "nue_tau_tau", "numu_e_mu", "nutau_e_tau"]
+
 statesN_e = {
                   "Semileptons":          ["e_pi", "nue_pi0", "nue_eta", "e_rho", "nue_rho0", "nue_omega",
                                         "nue_K0", "nue_Ks0", "e_K", "e_Ks", 
@@ -37,9 +43,6 @@ statesN_e = {
                                               "nue_u_u", "nue_d_d", "nue_c_c", "nue_s_s",
                                               "e_u_d", "e_u_s", "e_c_d", "e_c_s", 
                                               "nue_e_e", "nue_mu_mu", "nue_tau_tau", "numu_e_mu", "nutau_e_tau"]
-                    #     r"$\nu_e ee$":          ["nue_e_e"],
-                    # r"$\nu_e\mu\mu + \nu_e\tau\tau$":          ["nue_mu_mu", "nue_tau_tau"],
-                    # r"e$\mu\nu_\mu$ + e$\tau\nu_\tau$":          ["numu_e_mu", "nutau_e_tau"]
             }
 
 
@@ -413,10 +416,11 @@ class Calculate:
              
         return num/den
     
-    
-mN = np.logspace(-4,1.5,1000)
 
-colors = ["red", "blue", "green", "purple", "orange"]
+#%%    
+# mN = np.logspace(-3,1,10000)
+
+# colors = ["red", "blue", "green", "purple", "orange"]
     
     
 # calc1 = Calculate(1)
@@ -427,7 +431,7 @@ colors = ["red", "blue", "green", "purple", "orange"]
 #     for mass in mN:
 #         brs.append(calc1.NBR(mass, statesN_e[key]) + 1e-200)
 #     plt.plot(mN, brs, label = key, color = color)
-#     plt.xlim(1e-4, 14)
+#     plt.xlim(1e-3, 10)
 #     plt.ylim(1e-3, 1.5)
 #     plt.xlabel(r"$m_{N_3}$ (GeV)", fontsize=12)
 #     plt.xticks(fontsize=10)
@@ -448,7 +452,7 @@ colors = ["red", "blue", "green", "purple", "orange"]
 #     for mass in mN:
 #         brs.append(calc2.NBR(mass, statesN_mu[key]) + 1e-200)
 #     plt.plot(mN, brs, label = key, color=color)
-#     plt.xlim(1e-4, 14)
+#     plt.xlim(1e-3, 10)
 #     plt.ylim(1e-3, 1.5)
 #     plt.xlabel(r"$m_{N_2}$ (GeV)", fontsize=12)
 #     plt.xticks(fontsize=10)
@@ -469,7 +473,7 @@ colors = ["red", "blue", "green", "purple", "orange"]
 #     for mass in mN:
 #         brs.append(calc3.NBR(mass, statesN_tau[key]) + 1e-200)
 #     plt.plot(mN, brs, label = key, color=color)
-#     plt.xlim(1e-4, 14)
+#     plt.xlim(1e-3, 10)
 #     plt.ylim(1e-3, 1.5)
 #     plt.xlabel(r"$m_{N_3}$ (GeV)", fontsize=12)
 #     plt.xticks(fontsize=10)
