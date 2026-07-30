@@ -274,7 +274,7 @@ def delta(nu, l):
   
     
 def lamda(a, b, c):
-    return np.sqrt(a**2 + b**2 + c**2 - 2*a*b + 2*b*c + 2*c*a)    
+    return np.sqrt(a**2 + b**2 + c**2 - 2*a*b - 2*b*c - 2*c*a)    
 
 def FP(x, y):
     return lamda(1, x**2, y**2) * ((1 + x**2) * (1 + x**2 - y**2) - 4*(x**2))
